@@ -6,4 +6,8 @@ export class BookService {
   getAllBooks(): Book[] {
     return books;
   }
+
+  getBooksById(id: number): Book | null{
+    return books.find(book => book.id === id);
+  }
 }
